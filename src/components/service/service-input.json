@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_service_service_inputs",
+  "info": {
+    "displayName": "ServiceInput"
+  },
+  "options": {},
+  "attributes": {
+    "service": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service.service"
+    },
+    "LastPrice": {
+      "type": "decimal",
+      "required": false,
+      "default": 0
+    }
+  }
+}

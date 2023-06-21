@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "patients",
+  "info": {
+    "singularName": "patient",
+    "pluralName": "patients",
+    "displayName": "Patient",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": false
+    },
+    "Surname": {
+      "type": "string",
+      "required": false
+    },
+    "Phone": {
+      "type": "string",
+      "required": false
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Note": {
+      "type": "text"
+    },
+    "TreatmentList": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::treatment.treatment",
+      "mappedBy": "Patient"
+    }
+  }
+}

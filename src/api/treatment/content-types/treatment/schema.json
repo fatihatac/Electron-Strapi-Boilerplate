@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "treatments",
+  "info": {
+    "singularName": "treatment",
+    "pluralName": "treatments",
+    "displayName": "Treatment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DateTime": {
+      "type": "datetime"
+    },
+    "Note": {
+      "type": "text"
+    },
+    "ServiceList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.service-input"
+    },
+    "Patient": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::patient.patient",
+      "inversedBy": "TreatmentList"
+    }
+  }
+}

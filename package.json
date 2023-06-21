@@ -1,0 +1,52 @@
+{
+  "name": "saglik-kabini-strapi-electron",
+  "version": "1.0.0",
+  "description": "A Strapi application with electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "strapi start",
+    "develop": "strapi develop",
+    "build:win": "cross-env NODE_ENV=production npm run build",
+    "start:win": "cross-env NODE_ENV=production npm start",
+    "electron": "electron .",
+    "electron-build": "electron-builder",
+    "build": "strapi build && electron-builder"
+  },
+  "keywords": [],
+  "author": {
+    "name": "fatihatac",
+    "email": "fatac2000@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.10.2",
+    "@strapi/plugin-users-permissions": "4.10.2",
+    "@strapi/strapi": "4.10.2",
+    "bcrpyt": "^2.0.0",
+    "better-sqlite3": "8.0.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-is-packaged": "^1.0.2"
+  },
+  "devDependencies": {
+    "electron": "^24.1.2",
+    "electron-builder": "^23.6.0"
+  },
+  "strapi": {
+    "uuid": "a3b05d67-4ae0-47c2-b244-11cbba30f4d6"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "build": {
+    "appId": "saglik-kabini",
+    "productName": "Sağlık Kabini",
+    "asar": false,
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "NSIS"
+    }
+  }
+}
